@@ -12,7 +12,4 @@ RUN apk add --no-cache --update --virtual .build-deps \
  && apk del .build-deps \
  && rm -rf /tmp/* /var/tmp/* /usr/lib/ruby/gems/*/cache/*.gem
 
-WORKDIR /fluentd
-COPY fluent.conf /fluentd/etc/fluent.conf
-
 USER fluent
