@@ -13,6 +13,6 @@ RUN apk add --no-cache --update --virtual .build-deps \
  && apk del .build-deps \
  && rm -rf /tmp/* /var/tmp/* /usr/lib/ruby/gems/*/cache/*.gem
 
-RUN adduser -S root -G fluent
-
 USER fluent
+
+RUN adduser -S root -G fluent
