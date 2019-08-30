@@ -13,5 +13,6 @@ RUN apk add --no-cache --update --virtual .build-deps \
  && apk del .build-deps \
  && rm -rf /tmp/* /var/tmp/* /usr/lib/ruby/gems/*/cache/*.gem
 
-RUN usermod -a -G root fluent
+RUN addgroup -g root fluent
+
 USER fluent
